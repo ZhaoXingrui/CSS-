@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微场景</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 10vh 1fr 10vh;
+        }
+        header {
+            background: #f39c12;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 2em;
+            animation-name: translate;
+            animation-duration: .5s;
+        }
+        main {
+            background: url("images/bg1.jpeg") no-repeat;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            animation-name: rotate;
+            animation-duration: .5s;
+            animation-delay: 2s;
+            /* 动画没动使用起始帧 */
+            animation-fill-mode: backwards;
+        }
+        main>div {
+            border-radius: 10px;
+            width: 80vw;
+            padding: 10px;
+            opacity: .8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+        }
+        .opacity {
+            animation-name: opacity;
+            animation-duration: .5s;
+            animation-fill-mode: backwards;
+        }
+        .s3 {
+            animation-delay: 3s;
+        }
+        .s4 {
+            animation-delay: 4s;
+        }
+        div:nth-child(1) {
+            transform: translateY(-50px);
+            background-color: #1abc9c;
+        }
+        div:nth-child(2) {
+            background-color: #3498db;
+        }
+        footer {
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.3em;
+            animation-name: rotate;
+            animation-duration: .5s;
+            animation-delay: 1s;
+            /* 动画没动使用起始帧 */
+            animation-fill-mode: backwards;
+        }
+        @keyframes translate {
+            from {
+                transform: translateX(-100vw);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes rotate {
+            from {
+                transform: scale(0) rotate(360deg);
+            }
+            to {
+                transform: scale(1) rotate(0);
+            }
+        }
+        @keyframes opacity {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: .8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>zxr</header>
+    <main>
+        <div class="opacity s3">The greatest test of courage on earth is to bear defeat without losing heart.世界上对勇气的最大考验是忍受失败而不丧失信心。</div>
+        <div class="opacity s4">Genius is an infinite capacity for taking pains.所谓的天才是不断地承受痛楚。</div>
+    </main>
+    <footer>NJU</footer>
+</body>
+</html>
