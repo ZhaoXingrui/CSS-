@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation关键帧</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            animation-name: hd;
+            animation-duration: 2s;
+        }
+        @keyframes hd {
+            /* 使用 from 和 to 来表示开始和结束 */
+            /* 如果起始和终点不设置的话，默认使用的是元素的开始样式 */
+            /* from {
+                background-color: #fff;
+            }
+            to {
+                background-color: red;
+            } */
+            /* 可以使用百分数来表示多少帧 */
+            0% {
+                background-color: #fff;
+            }
+            25% {
+                transform: scale(2);
+            }
+            65% {
+                transform: scale(1);
+                background-color: blue;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main></main>
+</body>
+</html>
