@@ -25,7 +25,15 @@
             transition: 2s;
             border: 20px solid #fff;
         }
-        div:hover {
+        div:nth-of-type(1) {
+            /* 控制过渡效果是否立即发生 */
+            transition-property: all;
+            margin-bottom: 20px;
+        }
+        div:nth-of-type(2) {
+            transition-property: none;
+        }
+        main:hover div{
             width: 400px;
             height: 400px;
             border-radius: 50%;
@@ -34,6 +42,9 @@
     </style>
 </head>
 <body>
-    <div></div>
+    <main>
+        <div></div>
+        <div></div>
+    </main>
 </body>
 </html>
