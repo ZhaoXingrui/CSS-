@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片缩放</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #ddd;
+        }
+    
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        main div {
+            height: 200px;
+            width: 200px;
+            background: white;
+            border: solid 1px #ddd;
+            transition: all .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: blueviolet;
+            overflow: hidden;
+            border: solid 3px #555;
+            box-sizing: border-box;
+        }
+    
+        main div img {
+            height: 100%;
+        }
+    
+        main:hover div {
+            transform: scale(.8) translateY(-30px);
+            cursor: pointer;
+            /* 模糊属性 */
+            filter: blur(15px);
+        }
+        /* 鼠标移动到某一个div时放大，其他div缩小 */
+        main div:hover {
+            transform: scale(1.6);
+            color: white;
+            filter: none;
+            z-index: 2;
+        }
+    
+        main div:hover::after {
+            content: '';
+            position: absolute;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <img src="images/pic1.jpeg" alt="">
+        </div>
+        <div> <img src="images/pic2.jpeg" alt=""></div>
+        <div> <img src="images/pic3.jpeg" alt=""></div>
+    </main>
+</body>
+</html>
