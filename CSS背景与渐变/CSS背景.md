@@ -1,6 +1,5 @@
 # CSS背景与渐变
 ## 背景样式
-****
 ### 背景裁切
 `background-clip` 属性
 - `border-box` : 应用到边框
@@ -90,7 +89,6 @@ background: red url(xj-small.png) no-repeat right 50% fixed;
 ```
 ****
 ## 颜色渐变
-****
 ### 线性渐变
 **渐变可以设置角度和方向**
 ```CSS
@@ -129,7 +127,7 @@ background: linear-gradient(45deg, red 0,red 50%, blue 50%);
 
 CSS径向标识位绘制太阳
 ```CSS
-background: radial-gradient(red 0, yellow 30%, black 70%, black 100%
+background: radial-gradient(red 0, yellow 30%, black 70%, black 100%);
 ```
 <div style="width: 100px; height: 100px; background: radial-gradient(red 0, yellow 30%, black 70%, black 100%);"></div>
 
