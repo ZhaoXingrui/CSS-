@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景重复与背景滚动</title>
+    <style>
+        article {
+            border: solid #000 10px;
+            height: 500px;
+            /* 高度/宽度溢出时自动添加滚动条 */
+            overflow: auto;
+        }
+        div {
+            height: 1600px;
+            background-image: url('../CSS动画/images/bg1.jpeg');
+            background-repeat: no-repeat;
+            /* 该属性控制背景图片是否随滚轮的滚动而移动: fixed|scroll */
+            background-attachment: scroll;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div>zxr</div>
+    </article>
+</body>
+</html>
